@@ -1,0 +1,244 @@
+body {
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.listado{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-weight: 600;
+  font-size: 12px;
+}
+.listado > button{
+  padding: 10px;
+  max-width: 200px;
+  margin: 0 auto;
+}
+.searchbar{
+  width: 90%;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0 auto;
+}
+.searchbar > label{
+  text-align: left;
+  font-weight: 700;
+}
+.searchbar > input {
+  padding: 5px;
+}
+.searchbar > button {
+  padding: 5px;
+  max-width: 200px;
+}
+button{
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(55, 108, 51);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+a > button{
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  background-color: rgb(70, 70, 218);
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.boton-agregar{
+  width: 80%;
+  margin: 0 auto;
+}
+.boton-agregar > button{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+  .form{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+  }
+  .form > div{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .form > div > input{
+    padding: 5px;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.375);
+  }
+  th{
+    text-align: left;
+  }
+  td{
+    text-align: left;
+  }
+  .td-button{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+  }
+  .entregada{
+    background-color: green;
+    cursor: pointer;
+    width: 20px;
+    font-size: 12px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .no-entregada{
+    background-color: red;
+    cursor: pointer;
+    width: 20px;
+    font-size: 12px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .registrado-success{
+    color: green;
+    text-align: center;
+    animation: register 3s ease-in-out;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  .button-edit{
+    background-color: rgba(128, 128, 128, 0.646);
+    font-size: 10px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 2px;
+    color: white;
+    align-self: center;
+  }
+  .entregada.profile{
+     width: 40px;
+     height: 40px;
+     font-size: 18px;
+     margin: 0 auto;
+     border: none;
+  }
+  .no-entregada.profile{
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    margin: 0 auto;
+    border: none;
+  }
+
+  .delete-user{
+    color: white;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    border-radius: 0px;
+  }
+
+  .div-login{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+  }
+  .div-login > h1{
+    text-align: center;
+  }
+  .div-login > form{
+    display: flex;
+   flex-direction: column;
+   gap: 10px;
+  }
+  .div-login > form > label{
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 10%;
+  }
+  .div-login > form > input {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.331);
+  }
+
+  .div-login > form > button{
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .close-session{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    text-align: center;
+    padding: 2px;
+    margin: 2px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+  }
+
+  @keyframes register {
+    0%{
+      opacity: 0;
+    }
+    20%{
+      opacity: 1;
+    }
+    70%{
+      opacity: 1;
+
+    }
+    100%{
+      opacity: 0;
+
+    }
+  }
