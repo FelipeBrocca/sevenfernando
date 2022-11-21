@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-export const getUsersRequests = async () => await axios.get('/users')
+export const getUsersRequests = async () => await axios.get('https://sevenfernandoapi.onrender.com/users')
 
-export const createUsersRequests = async (user) => await axios.post('/users', user)
+export const createUsersRequests = async (user) => await axios.post('https://sevenfernandoapi.onrender.com/users', user)
 
-export const editUserRequest = async (id) => await axios.get(`/users/${id}`)
+export const editUserRequest = async (id) => await axios.get(`https://sevenfernandoapi.onrender.com/users/${id}`)
 
-export const updateUserRequest = async (id, user) => await axios.put(`/users/${id}`, user)
+export const updateUserRequest = async (id, user) => await axios.put(`https://sevenfernandoapi.onrender.com/users/${id}`, user)
 
-export const eliminateUserRequest = async (id) => await axios.delete(`/users/${id}`)
+export const eliminateUserRequest = async (id) => await axios.delete(`https://sevenfernandoapi.onrender.com/users/${id}`)
