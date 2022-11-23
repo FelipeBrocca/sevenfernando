@@ -27,6 +27,7 @@ const List = () => {
   const handleCloseSession = () => {
     sessionStorage.removeItem('token')
   }
+
   
   return (
     <div className='listado'>
@@ -37,6 +38,7 @@ const List = () => {
       <Link className='boton-agregar' to='/registrar'><button>
         AGREGAR USUARIO
       </button></Link>
+      <h3>Total de registros: {users.length}</h3>
 
       <form className='searchbar'>
          <label htmlFor='searchbar'>Buscar por DNI</label>
