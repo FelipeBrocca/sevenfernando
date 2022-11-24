@@ -41,7 +41,7 @@ const List = () => {
       <h3>Total de registros: {users.length}</h3>
 
       <form className='searchbar'>
-         <label htmlFor='searchbar'>Buscar por DNI</label>
+         <label htmlFor='searchbar'>Buscar por Nombre</label>
          <input 
          type='search' 
          name='searchbar' 
