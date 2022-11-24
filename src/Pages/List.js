@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { UsersProvider, useUsers } from '../context/UsersContext';
+import { useUsers } from '../context/UsersContext';
 
 
 const List = () => {
@@ -17,7 +17,7 @@ const List = () => {
 
   const filtrar = (terBusqueda) => {
     let resultadoBusqueda = users.filter((user) => {
-      if(user.dni.includes(terBusqueda)){
+      if(user.name.includes(terBusqueda)){
         return user
       }
     })
@@ -45,7 +45,7 @@ const List = () => {
          <input 
          type='search' 
          name='searchbar' 
-         placeholder='Ingresar DNI'
+         placeholder='Ingresar Nombre'
          onChange={handleBusqueda}
          />
          <button>Buscar</button>
