@@ -48,7 +48,7 @@ const List = () => {
          placeholder='Ingresar Nombre'
          onChange={handleBusqueda}
          />
-         <button>Buscar</button>
+         <button>Borrar busqueda</button>
       </form>
       <h2>NO ENTREGADAS</h2>
       <table>
