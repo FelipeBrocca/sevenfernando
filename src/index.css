@@ -42,6 +42,7 @@ code {
   flex-direction: column;
   gap: 5px;
   margin: 0 auto;
+  position: relative;
 }
 .searchbar > label{
   text-align: left;
@@ -49,10 +50,6 @@ code {
 }
 .searchbar > input {
   padding: 5px;
-}
-.searchbar > button {
-  padding: 5px;
-  max-width: 200px;
 }
 button{
   padding: 10px;
@@ -225,7 +222,24 @@ a > button{
     background-color: black;
     color: white;
   }
-
+  .search-container.active{
+    width: 100%;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(213, 213, 213, 0.681);
+    border-radius: 0px 0px 20px 20px;
+    top: 50px;
+  }
+  .search-container.none{
+    height: 0px;
+  }
+  .search-container.active > ul > a > li{
+    list-style: none;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    padding: 2px;
+  }
   @keyframes register {
     0%{
       opacity: 0;

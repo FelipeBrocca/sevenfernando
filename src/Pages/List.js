@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useUsers } from '../context/UsersContext';
 
 
 const List = () => {
   
-  const {users, setUsers} = useUsers()
+  const {users} = useUsers()
+  const [usersSearch, setUsersSearch] = useState(users)
   const [busqueda, setBusqueda] = useState('')
 
 
@@ -17,11 +18,11 @@ const List = () => {
 
   const filtrar = (terBusqueda) => {
     let resultadoBusqueda = users.filter((user) => {
-      if(user.name.includes(terBusqueda)){
+      if(user.name.toString().toLowerCase().includes(terBusqueda.toLowerCase())){
         return user
       } else return ''
     })
-    setUsers(resultadoBusqueda)
+    setUsersSearch(resultadoBusqueda)
   }
 
   const handleCloseSession = () => {
@@ -46,9 +47,29 @@ const List = () => {
          type='search' 
          name='searchbar' 
          placeholder='Ingresar Nombre'
+         autoComplete='off'
+         value={busqueda}
          onChange={handleBusqueda}
          />
-         <button>Borrar busqueda</button>
+         <div className={busqueda ? 'search-container active' : 'search-container none'}>
+          <ul>
+         {
+          busqueda ?
+          usersSearch.slice(0, 4).map((user) => {
+            return(
+              <Link 
+              key={user.id + user.name}
+              onClick={() => setBusqueda('')}
+              to={{pathname:`/user/${user._id}`, data: user}}
+              >
+              <li>{user.name}</li>
+              </Link>
+            )
+          })
+          : ''
+         }
+         </ul>
+          </div>
       </div>
       <h2>NO ENTREGADAS</h2>
       <table>
