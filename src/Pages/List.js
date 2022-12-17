@@ -19,7 +19,7 @@ const List = () => {
     let resultadoBusqueda = users.filter((user) => {
       if(user.name.includes(terBusqueda)){
         return user
-      }
+      } else return ''
     })
     setUsers(resultadoBusqueda)
   }
@@ -40,7 +40,7 @@ const List = () => {
       </button></Link>
       <h3>Total de registros: {users.length}</h3>
 
-      <form className='searchbar'>
+      <div className='searchbar'>
          <label htmlFor='searchbar'>Buscar por Nombre</label>
          <input 
          type='search' 
@@ -49,7 +49,7 @@ const List = () => {
          onChange={handleBusqueda}
          />
          <button>Borrar busqueda</button>
-      </form>
+      </div>
       <h2>NO ENTREGADAS</h2>
       <table>
         <thead>
