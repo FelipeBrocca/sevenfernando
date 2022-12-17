@@ -1,5 +1,5 @@
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
-import { UsersProvider, useUsers } from './context/UsersContext';
+import { UsersProvider } from './context/UsersContext';
 
 
 import Login from './Pages/Login'
@@ -7,16 +7,9 @@ import PrivateRoutes from './Routes/PrivateRoutes'
 import List from './Pages/List'
 import Add from './Pages/Add'
 import Profile from './Pages/Profile';
-import { useEffect } from 'react';
 
 
 function App() {
-
-  const {getUsers} = useUsers()
-
-  useEffect(() => {
-     getUsers()
-  }, [])
   
   return (
     <div className="App">
